@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Undangan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./dust.js"></script>
+    <script src="https://livejs.com/live.js"></script>
+  </head>
+  <body>
+
+    <div id="playback"></div>
+    <audio id="song" loop>
+      <source src="https://inv.punakawandigital.id/wp-content/uploads/2024/09/Nyoman-Paul-Andi-Rianto-The-Way-You-Look-At-Me-Official-Music-Video-dt-24.mp3" type="audio/mp3">
+    </audio>
+    <!-- Cover Start -->
+    <!-- <div id="cover"> -->
+    <!--   <div id="cover-container"> -->
+    <!--     <div id="cover-header"> -->
+    <!--       <img src="./assets/img/home/1.png" class="legend-corner left"> -->
+    <!--       <img src="./assets/img/home/2.png" class="legend-side left"> -->
+    <!--       <img src="./assets/img/home/3.png" class="legend-main"> -->
+    <!--       <img src="./assets/img/home/4.png" class="legend-side right"> -->
+    <!--       <img src="./assets/img/home/5.png" class="legend-corner right"> -->
+    <!--     </div> -->
+    <!--     <div id="cover-line"></div> -->
+
+    <!--     <div id="cover-content"> -->
+    <!--       <div id="title-container"> -->
+    <!--         <p id="title">- Wedding Invitation -</p> -->
+    <!--         <h1 id="title-name">Luthfiyah & Althaf</h1> -->
+    <!--       </div> -->
+
+    <!--       <div class="lines"> -->
+    <!--         <div class="line"></div> -->
+    <!--         <div class="line"></div> -->
+    <!--       </div> -->
+    <!--       <div class="image"> -->
+    <!--         <canvas id="cover-image"></canvas> -->
+    <!--         <img id="cover-icon" src="./assets/img/cover-icon.png" alt=""> -->
+    <!--         <div id="cover-date">05.04.2025</div> -->
+    <!--       </div> -->
+    <!--     </div> -->
+
+    <!--     <div id="cover-footer"> -->
+    <!--       <p class="strong">Dear</p> -->
+    <!--       <p>Tamu Undangan</p> -->
+    <!--       <div id="open-invitation"> -->
+    <!--         <button id="invitation-button">Open Invitation</button> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <!-- Cover END -->
+
+    <div id="container">
+
+      <!-- First Section START -->
+      <section>
+        <div id="first-page">
+          <div class="header">
+            <div class="line"></div>
+            <div class="header-content">
+              <p class="header-left">2025</p>
+              <p class="header-middle">SABTU, 5 APRIL</p>
+              <p class="header-right">PALEMBANG</p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <h2>You Are Invited!</h2>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <canvas id="invited-image"></canvas>
+          <p class="title">THE WEDDING OF</p>
+          <h1>Luthfiyah &</h1>
+          <h1>Althaf</h1>
+          <p class="date">05.04.2025</p>
+          <div class="line"></div>
+          <h3>Dear Family & Friends</h3>
+          <div class="line"></div>
+          <div class="sambutan">
+            <div class="text">
+              <p>Dengan penuh rasa syukur, kami mengundang anda untuk memberikan doa restu pada pernikahan kami.</p>
+              <p>Kehadiran Anda akan menjadi kenangan yang berharga di hari yang sangat istimewa ini.</p>
+              <p>Mari kita bersama-sama merayakan dan mendoakan langkah baru kami yang penuh cinta dan keberkahan.</p>
+            </div>
+            <canvas id="sambutan-image"></canvas>
+          </div>
+          <div class="line"></div>
+          <div class="special-footer">
+            <p class="footer-left">#ALifetimewithYA</p>
+            <div class="footer-middle">
+              <div class="circle"></div>
+              <div class="arrow"></div>
+              <!-- <div class="arrow delay"></div> -->
+            </div>
+            <img class="footer-right" src="./assets/img/footer-icon.png" alt="">
+          </div>
+          <div class="line"></div>
+        </div>
+      </section>
+      <!-- First Section END -->
+
+      <!-- Second Section START -->
+      <section>
+        <div id="second-page">
+          <div class="header">
+            <div class="line"></div>
+            <div class="header-content">
+              <p class="header-left">2025</p>
+              <p class="header-middle">SABTU, 5 APRIL</p>
+              <p class="header-right">PALEMBANG</p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <canvas id="bio-image"></canvas>
+          <div id="ayat-frame">
+            <div class="box-corner btl"></div>
+            <div class="box-corner btr"></div>
+            <div class="box-corner bbl"></div>
+            <div class="box-corner bbr"></div>
+            <div id="ayat">
+              <p>“Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+              <p>QS Ar-Rum :21</p>
+            </div>
+          </div>
+          <div class="biodata">
+            <div class="bio-image groom"></div>
+            <div class="bio bio-left">
+              <p>THE GROOM</p>
+              <p>ALTHAF</p>
+              <p>TAUFIQURRAHMAN, S.T.</p>
+              <div class="line"></div>
+              <p>FIRST SON OF</p>
+              <p>H. Ir. Toto Apriyanto</p>
+              <p>& Hj. Foreni Oktiendiko, A.Md</p>
+              <a href="https://www.instagram.com/altop1999/" target="_blank">
+                <div class="instagram-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <p id="with">With</p>
+          <div class="biodata">
+            <div class="bio bio-right">
+              <p>THE BRIDE</p>
+              <p>LUTHFIYAH AFNAN</p>
+              <p>SAYYIDAH S.T.</p>
+              <div class="line"></div>
+              <p>FIRST DAUGHTER OF</p>
+              <p>Alm. Teguh Budiyanto,</p>
+              <p>& Siti Aisyah</p>
+              <a href="https://www.instagram.com/luthfiyahas27/" target="_blank">
+                <div class="instagram-icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </a>
+            </div>
+            <div class="bio-image bride"></div>
+          </div>
+          <div class="footer">
+            <div class="line"></div>
+            <div class="footer-content">
+              <p class="footer-left">#ALifetimewithYA</p>
+              <img class="footer-right" src="./assets/img/footer-icon.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Second Section END -->
+
+      <!-- Third Section START -->
+      <section>
+        <div id="third-page">
+          <div class="header">
+            <div class="line"></div>
+            <div class="header-content">
+              <p class="header-left">2025</p>
+              <p class="header-middle">SABTU, 5 APRIL</p>
+              <p class="header-right">PALEMBANG</p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <h1>Our Journey</h1>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div id="journey-container">
+            <div id="journey-image"></div>
+            <div id="journeys">
+              <div class="journey-content">
+                <p class="journey-title">AWAL BERTEMU</p>
+                <p class="journey-description">Kisah ini berawal dari pertemuan kami di UNSRI pada tahun 2017. Di kampus yang sama, kami berkomitmen untuk menjadi partner Penelitian, Kerja Praktek, dan Tugas Akhir, dan dari situ kami menemukan kecocokan yang tidak terduga</p>
+              </div>
+              <div class="line"></div>
+              <div class="journey-content">
+                <p class="journey-title">MEMANTAPKAN HATI</p>
+                <p class="journey-description">Seiring berjalannya waktu, kami semakin yakin bahwa kami memiliki tujuan hidup yang sejalan. Dari situlah tumbuh keyakinan dalam hati kami untuk melangkah Bersama membangun masa depan</p>
+              </div>
+              <div class="line"></div>
+              <div class="journey-content">
+                <p class="journey-title">MELAMAR</p>
+                <p class="journey-description">Di awal tahun 2025, kami memutuskan untuk melangkah lebih jauh dengan lamaran yang disaksikan oleh kedua orang tua dan keluarga dekat.</p>
+              </div>
+              <div class="line"></div>
+              <div class="journey-content">
+                <p class="journey-title">MENIKAH</p>
+                <p class="journey-description">Kami memutuskan untuk mengikat janji suci pernikahan pada tanggal 05 April 2025.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="line"></div>
+            <div class="footer-content">
+              <p class="footer-left">#ALifetimewithYA</p>
+              <img class="footer-right" src="./assets/img/footer-icon.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Third Section END -->
+
+      <!-- Third Section START -->
+      <section>
+        <div id="fourth-page">
+          <div class="header">
+            <div class="line"></div>
+            <div class="header-content">
+              <p class="header-left">2025</p>
+              <p class="header-middle">SABTU, 5 APRIL</p>
+              <p class="header-right">PALEMBANG</p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div id="information-container">
+            <div id="save-the-date">
+              <p>Save The Date</p>
+              <h1>05 APRIL 2025</h1>
+              <div class="line"></div>
+              <div id="countdown">
+                <div id="day" class="countdown-item">
+                  <p>50</p>
+                  <h4>Hari</h4>
+                </div>
+                <div id="hour" class="coutndown-item">
+                  <p>24</p>
+                  <h4>Jam</h4>
+                </div>
+                <div id="minute" class="countdown-item">
+                  <p>60</p>
+                  <h4>Menit</h4>
+                </div>
+                <div id="second" class="countdown-item">
+                  <p>60</p>
+                  <h4>Detik</h4>
+              </div>
+              </div>
+              <div class="line"></div>
+            </div>
+            <div id="location"></div>
+            <canvas id="location-image"></canvas>
+          </div>
+          <div class="footer">
+            <div class="line"></div>
+            <div class="footer-content">
+              <p class="footer-left">#ALifetimewithYA</p>
+              <img class="footer-right" src="./assets/img/footer-icon.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Third Section END -->
+
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
