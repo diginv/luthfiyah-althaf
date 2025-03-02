@@ -20,12 +20,16 @@ $(function() {
   generateDust("cover-image")
   generateDust("invited-image")
   generateDust("bio-image")
-  generateDust("journey-image")
+  // generateDust("journey-image")
   generateDust("location-image")
+  generateDust("gift-image")
   // generateDust("sambutan-image")
 
   $("#invitation-button").click(() => {
     $("#cover").addClass("opened")
   })
 
+  $("#toggle-gift").click(() => {
+    $("#open").toggle()
+  })
 })

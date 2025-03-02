@@ -30,7 +30,7 @@ const generateDust = (id) => {
       this.h = parseInt(0);
       this.s = parseInt(0);
       this.l = parseInt(100);
-      this.a = 0.7 * Math.random();
+      this.a = 0.75 * Math.random();
 
       this.color = "hsla(" + this.h + "," + this.s + "%," + this.l + "%," + (this.a) + ")";
       this.shadowcolor = "hsla(" + this.h + "," + this.s + "%," + this.l + "%," + parseFloat(this.a - 0.55) + ")";

@@ -695,10 +695,14 @@ p {
 #information-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100%;
+  /* border: 1px solid red; */
+}
+
+#information-container > div {
   /* border: 1px solid red; */
 }
 
@@ -706,18 +710,106 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* width: 60%; */
+}
+
+#save-the-date > .line {
+  width: 120%;
+}
+
+#save-the-date > p {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+#save-the-date > h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: italic;
+  font-size: 2rem;
 }
 
 #countdown {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 120%;
+  padding: 5px 0px;
+  /* border: 1px solid red; */
 }
 
 .countdown-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 1px solid red; */
+}
+
+.countdown-item > p {
+  font-family: "Poppins";
+}
+
+.countdown-item > h4 {
+  font-family: "Playfair Display";
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+#location {
+  display: flex;
+  font-size: 0.7rem;
+  gap: 10%;
+  padding: 0px 10px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.location > h1 {
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  align-self: center;
+}
+
+.location > .time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Poppins";
+  font-style: italic;
+}
+
+.location > .place{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: italic;
+}
+
+.location > .address {
+  font-family: "Poppins";
+  font-style: italic;
+  text-align: justify;
+}
+
+.location > button {
+  font-family: "Poppins";
+  /* font-size: 1rem; */
+  border-radius: 50px;
+  color: #ebe6e0;
+  background-color: #2e2d2b;
+  align-self: flex-end;
+  padding: 0px 10px;
+  outline: none;
+  border: none;
 }
 
 #location-image {
@@ -725,4 +817,164 @@ p {
   /* height: 220px; */
   width: 100%;
   margin-bottom: 10px;
+}
+
+#fifth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
+
+#gift-image {
+  background-image: url("./assets/img/gift.png");
+  background-position: 0% 25%;
+  height: 150px;
+  width: 100%;
+}
+
+#gift-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+  /* padding-bottom: 50px; */
+}
+
+#gift-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* height: 100%; */
+}
+
+#gift-container > h1 {
+  font-family: "Playfair Display";
+  font-size: 2rem;
+}
+
+#gift-container > p {
+  text-align: center;
+  font-size: 0.75rem;
+  width: 80%;
+}
+
+#gift-body > button {
+  font-family: "Poppins";
+  border-radius: 50px;
+  color: #ebe6e0;
+  background-color: #2e2d2b;
+  padding: 0px 20px;
+  outline: none;
+  border: none;
+}
+
+#open {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#open > * {
+  /* border: 1px solid red; */
+}
+
+.gift-card {
+  background-image: url("./assets/img/gift-card.png");
+  background-size: 100% 100%;
+  position: relative;
+  width: 325px;
+  height: 125px;
+  /* border: 1px solid red; */
+}
+
+.gift-card > img {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  /* transform: translate(-50%, 100%); */
+  width: 20%;
+  height: auto;
+  /* border: 1px solid red; */
+}
+
+.gift-card .gift-information {
+  position: absolute;
+  width: 200px;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  /* border: 1px solid red; */
+}
+
+.gift-number {
+  font-size: 0.65rem;
+}
+
+.gift-name > p {
+  font-size: 0.65rem;
+}
+
+.gift-card > button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -100%);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: "Poppins";
+  border-radius: 50px;
+  color: #ebe6e0;
+  background-color: #2e2d2b;
+  padding: 0px 10px;
+  outline: none;
+  border: none;
+}
+
+.gift-card > button > i {
+  color: #ebe6e0;
+}
+
+.gift-present {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  width: 325px;
+  height: 125px;
+  background-image: url("./assets/img/gift-present.png");
+  background-size: 100% 100%;
+  /* border: 1px solid red; */
+}
+
+.gift-present > * {
+  /* border: 1px solid red; */
+}
+
+.gift-present > i {
+  height: 14px;
+}
+
+.gift-present > p {
+  font-weight: 600;
+  font-size: 0.6rem;
+  font-style: italic;
+}
+
+.gift-present > .gift-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-present > .gift-information > p {
+  font-size: 0.6rem;
+  font-style: italic;
 }
