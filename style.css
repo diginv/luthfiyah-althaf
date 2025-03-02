@@ -243,6 +243,7 @@ p {
   scroll-snap-type: both mandatory;
   height: 100vh;
   overflow: auto;
+  max-width: 550px;
 }
 
 
