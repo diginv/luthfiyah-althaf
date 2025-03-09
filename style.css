@@ -17,13 +17,14 @@ body {
 #playback {
   position: fixed;
   z-index: 100;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  right: 0px;
-  bottom: 0px;
+  right: 5%;
+  bottom: 8%;
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.5);
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: #2e2d2b;
 }
 
 section {
@@ -37,7 +38,7 @@ section {
 
 #cover {
   z-index: 5;
-  max-width: 550px;
+  max-width: 500px;
   transition: 1.5s;
   top: 0px;
   left: 0px;
@@ -51,7 +52,7 @@ section {
 
 #cover-container {
   position: relative;
-  border: 0.4vw solid #2e2d2b;
+  border: 1px solid #2e2d2b;
   height: 85vh;
   width: 100%;
   display: flex;
@@ -107,7 +108,7 @@ section {
 
 #cover-line {
   width: 95%;
-  border-top: 0.4vw solid #2e2d2b;
+  border-top: 1px solid #2e2d2b;
   position: absolute;
   top: 1.25%;
 }
@@ -156,7 +157,7 @@ section {
 }
 
 .line {
-  border-top: 0.4vw solid #2e2d2b;
+  border-top: 1px solid #2e2d2b;
   width: 100%;
   /* margin-top: 2.75%; */
 }
@@ -213,7 +214,7 @@ p {
 }
 
 #open-invitation {
-  border-top: 0.4vw solid #2e2d2b;
+  border-top: 1px solid #2e2d2b;
   width: 100%;
   padding: 10px 0px;
   display: flex;
@@ -243,12 +244,12 @@ p {
   scroll-snap-type: both mandatory;
   height: 100vh;
   overflow: auto;
-  max-width: 550px;
+  max-width: 500px;
 }
 
 
 #container::-webkit-scrollbar {
-    width: 1.1vw;
+    width: 2px;
     position: absolute;
 }
 
@@ -301,8 +302,8 @@ p {
   width: 100%;
 }
 
-/* #first-page > p { */
-/*   font-size: 1.25rem; */
+/* #first-page > * { */
+/*   border: 1px solid red; */
 /* } */
 
 #first-page > h2 {
@@ -314,26 +315,37 @@ p {
 
 #invited-image {
   background-image: url("./assets/img/invited.png");
-  margin-top: 10px;
+  /* margin-top: 0px; */
   width: 100%;
   height: 20%;
   /* border: 1px solid red; */
 }
 
-#first-page > .title {
-  margin-top: 2%;
-  font-size: 1rem;
+.name { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#first-page > h1 {
+.name > .title {
+  font-family: "Poppins";
+  margin-top: 2%;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.name > h1 {
   font-family: "Playfair Display";
   font-style: italic;
   font-size: 2rem;
+  /* border: 1px solid red; */
 }
 
-#first-page > .date {
+.name > .date {
   font-family: "Poppins";
+  font-weight: 500;
   margin: 2% 0px;
+  font-size: 0.8rem;
 }
 
 #first-page > h3 {
@@ -353,8 +365,9 @@ p {
 .sambutan > .text {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 5%;
   /* border: 2px solid green; */
   height: 100%;
 }
@@ -364,7 +377,7 @@ p {
   text-align: center;
   font-family: "Poppins";
   font-style: italic;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
 }
 
 #sambutan-image {
@@ -405,15 +418,15 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 0.4vw solid #2e2d2b;
+  border: 1px solid #2e2d2b;
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
 .arrow {
-  border-top: 0.4vw solid #2e2d2b;
-  border-left: 0.4vw solid #2e2d2b;
+  border-top: 1px solid #2e2d2b;
+  border-left: 1px solid #2e2d2b;
   width: 15px;
   height: 15px;
   /* transform: rotate(-135deg); */
@@ -446,7 +459,7 @@ p {
 }
 
 .special-footer > .footer-right {
-  border-left: 0.4vw solid #2e2d2b;
+  border-left: 1px solid #2e2d2b;
 }
 
 
@@ -471,7 +484,7 @@ p {
   width: 10%;
   height: 25%;
   background-image: url("./assets/img/bg.png");
-  border: 0.4vw solid #2e2d2b;
+  border: 1px solid #2e2d2b;
   border-radius: 50%;
 }
 
@@ -505,14 +518,20 @@ p {
 }
 
 #ayat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
   width: 100%;
-  padding: 20px 30px;
-  border: 0.4vw solid #2e2d2b;
+  padding: 15px 40px 10px 40px;
+  border: 1px solid #2e2d2b;
   /* border-radius: -10%; */
 }
 
 #ayat > p {
-  font-size: 0.6rem;
+  font-size: 0.65rem;
+  line-height: 1em;
 }
 
 #ayat > p:nth-child(1) {
@@ -527,11 +546,22 @@ p {
   text-align: center;
 }
 
+#biodata-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  /* gap: 2%; */
+  height: fit-content;
+}
+
 .biodata {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  /* border: 2px solid green; */
 }
 
 .groom {
@@ -543,9 +573,10 @@ p {
 }
 
 .bio-image {
-  height: 100%;
   flex-grow: 1;
   min-width: 150px;
+  /* border: 1px solid red; */
+  height: 100%;
 }
 
 .bio {
@@ -603,6 +634,7 @@ p {
 }
 
 .instagram-icon {
+  margin-top: 5px;
   background-color: #2e2d2b;
   padding: 3px 4px;
   border-radius: 50%;
@@ -617,6 +649,9 @@ p {
 
 #with {
   font-family: "Playfair Display";
+  font-size: 0.8rem;
+  margin: 10px 0px;
+  /* border: 1px solid red;; */
 }
 
 .footer {
@@ -645,6 +680,10 @@ p {
   width: 100%;
   text-align: right;
   padding: 10px 0px;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2.5px;
 }
 
 #journey-container {
@@ -666,7 +705,13 @@ p {
   width: 48%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 3%;
+  align-items: flex-end;
+}
+
+#journeys > .line{
+  width: 120px;
 }
 
 .journey-content {
@@ -682,6 +727,7 @@ p {
 
 .journey-description {
   font-size: 0.7rem;
+  line-height: 1.2em;
 }
 
 #fourth-page {
@@ -729,6 +775,7 @@ p {
   font-weight: 600;
   font-style: italic;
   font-size: 2rem;
+  margin-bottom: 5px;
 }
 
 #countdown {
@@ -762,6 +809,7 @@ p {
   font-size: 0.7rem;
   gap: 10%;
   padding: 0px 10px;
+  width: 80%;
 }
 
 .location {
@@ -775,7 +823,12 @@ p {
 .location > h1 {
   font-family: "Playfair Display";
   font-size: 2rem;
-  align-self: center;
+  /* align-self: left; */
+  /* border: 1px solid red; */
+}
+
+.location > .line {
+  margin-top: 5px;
 }
 
 .location > .time {
@@ -802,6 +855,7 @@ p {
 }
 
 .location > button {
+  margin-top: 5px;
   font-family: "Poppins";
   /* font-size: 1rem; */
   border-radius: 50px;
@@ -811,6 +865,11 @@ p {
   padding: 0px 10px;
   outline: none;
   border: none;
+}
+
+.location > button > a{
+  color: #ebe6e0;
+  text-decoration: none;
 }
 
 #location-image {
@@ -834,7 +893,12 @@ p {
   background-position: 0% 25%;
   height: 150px;
   width: 100%;
+  transition: 1s;
 }
+
+/* #gift-image > .hide-image { */
+/*   height: 0px; */
+/* } */
 
 #gift-body {
   display: flex;
@@ -849,11 +913,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  transition: 1s;
   /* height: 100%; */
 }
 
 #gift-container > h1 {
+  margin-top: 5px;
   font-family: "Playfair Display";
   font-size: 2rem;
 }
@@ -862,9 +928,11 @@ p {
   text-align: center;
   font-size: 0.75rem;
   width: 80%;
+  line-height: 1em;
+  font-style: italic;
 }
 
-#gift-body > button {
+#toggle-gift {
   font-family: "Poppins";
   border-radius: 50px;
   color: #ebe6e0;
@@ -872,13 +940,30 @@ p {
   padding: 0px 20px;
   outline: none;
   border: none;
+  transition: 1s;
+}
+
+#gift-hider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 0px;
+  /* height: 500px; */
+  transition: 1s;
+  /* border: 1px solid green; */
+  /* box-shadow: 0px 0px 10px 10px #ebe6e0; */
 }
 
 #open {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 1s;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid red; */
 }
 
 #open > * {
@@ -889,8 +974,8 @@ p {
   background-image: url("./assets/img/gift-card.png");
   background-size: 100% 100%;
   position: relative;
-  width: 325px;
-  height: 125px;
+  width: 280px;
+  height: 130px;
   /* border: 1px solid red; */
 }
 
@@ -898,7 +983,15 @@ p {
   position: absolute;
   top: 20%;
   right: 10%;
-  /* transform: translate(-50%, 100%); */
+  width: 20%;
+  height: auto;
+  /* border: 1px solid red; */
+}
+
+#bsi {
+  position: absolute;
+  top: 10%;
+  right: 7%;
   width: 20%;
   height: auto;
   /* border: 1px solid red; */
@@ -918,6 +1011,7 @@ p {
 }
 
 .gift-name > p {
+  font-style: italic;
   font-size: 0.65rem;
 }
 
@@ -925,7 +1019,7 @@ p {
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(-50%, -100%);
+  transform: translate(-30%, -100%);
   display: flex;
   gap: 5px;
   align-items: center;
@@ -948,8 +1042,8 @@ p {
   justify-content: center;
   align-items: center;
   /* gap: 10px; */
-  width: 325px;
-  height: 125px;
+  width: 280px;
+  height: 150px;
   background-image: url("./assets/img/gift-present.png");
   background-size: 100% 100%;
   /* border: 1px solid red; */
@@ -978,4 +1072,6 @@ p {
 .gift-present > .gift-information > p {
   font-size: 0.6rem;
   font-style: italic;
+  text-align: center;
+  width: 90%;
 }
