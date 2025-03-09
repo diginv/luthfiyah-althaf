@@ -10,16 +10,20 @@
 }
 
 body {
+  background-image: url("./assets/img/desktop.jpg");
+  background-position: top left;
+  background-size: calc(100% - 500px);
+  background-color: #2e2d2b;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .desktop {
-  width: 100%;
+  /* width: 100%; */
   background-color: red;
-  background-image: url("./assets/img/desktop.jpg");
-  background-position: top;
+  border:1px solid red;
+  width: 500px;
 }
 
 #playback {
