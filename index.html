@@ -17,9 +17,9 @@
   <body>
 
     <!-- <div id="playback"></div> -->
-    <!-- <audio id="song" loop> -->
-    <!--   <source src="https://inv.punakawandigital.id/wp-content/uploads/2024/09/Nyoman-Paul-Andi-Rianto-The-Way-You-Look-At-Me-Official-Music-Video-dt-24.mp3" type="audio/mp3"> -->
-    <!-- </audio> -->
+    <audio id="song" loop>
+      <source src="./assets/audio/backsound.mp3" type="audio/mp3">
+    </audio>
     <!-- Cover Start -->
     <div id="cover">
       <div id="cover-container">
@@ -80,10 +80,12 @@
             <div class="line"></div>
           </div>
           <canvas id="invited-image"></canvas>
-          <p class="title">THE WEDDING OF</p>
-          <h1>Luthfiyah &</h1>
-          <h1>Althaf</h1>
-          <p class="date">05.04.2025</p>
+          <div class="name">
+            <p class="title">THE WEDDING OF</p>
+            <h1>Luthfiyah &</h1>
+            <h1>Althaf</h1>
+            <p class="date">05.04.2025</p>
+          </div>
           <div class="line"></div>
           <h3>Dear Family & Friends</h3>
           <div class="line"></div>
@@ -133,40 +135,42 @@
               <p>QS Ar-Rum :21</p>
             </div>
           </div>
-          <div class="biodata">
-            <div class="bio-image groom"></div>
-            <div class="bio bio-left">
-              <p>THE GROOM</p>
-              <p>ALTHAF</p>
-              <p>TAUFIQURRAHMAN, S.T.</p>
-              <div class="line"></div>
-              <p>FIRST SON OF</p>
-              <p>H. Ir. Toto Apriyanto</p>
-              <p>& Hj. Foreni Oktiendiko, A.Md</p>
-              <a href="https://www.instagram.com/altop1999/" target="_blank">
-                <div class="instagram-icon">
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-              </a>
+          <div id="biodata-container">
+            <div class="biodata">
+              <div class="bio-image groom"></div>
+              <div class="bio bio-left">
+                <p>THE GROOM</p>
+                <p>ALTHAF</p>
+                <p>TAUFIQURRAHMAN, S.T.</p>
+                <div class="line"></div>
+                <p>FIRST SON OF</p>
+                <p>H. Ir. Toto Apriyanto</p>
+                <p>& Hj. Foreni Oktiendiko, A.Md</p>
+                <a href="https://www.instagram.com/altop1999/" target="_blank">
+                  <div class="instagram-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <p id="with">With</p>
-          <div class="biodata">
-            <div class="bio bio-right">
-              <p>THE BRIDE</p>
-              <p>LUTHFIYAH AFNAN</p>
-              <p>SAYYIDAH S.T.</p>
-              <div class="line"></div>
-              <p>FIRST DAUGHTER OF</p>
-              <p>Alm. Teguh Budiyanto,</p>
-              <p>& Siti Aisyah</p>
-              <a href="https://www.instagram.com/luthfiyahas27/" target="_blank">
-                <div class="instagram-icon">
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-              </a>
+            <p id="with">With</p>
+            <div class="biodata">
+              <div class="bio bio-right">
+                <p>THE BRIDE</p>
+                <p>LUTHFIYAH AFNAN</p>
+                <p>SAYYIDAH S.T.</p>
+                <div class="line"></div>
+                <p>FIRST DAUGHTER OF</p>
+                <p>Alm. Teguh Budiyanto,</p>
+                <p>& Siti Aisyah</p>
+                <a href="https://www.instagram.com/luthfiyahas27/" target="_blank">
+                  <div class="instagram-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="bio-image bride"></div>
             </div>
-            <div class="bio-image bride"></div>
           </div>
           <div class="footer">
             <div class="line"></div>
@@ -270,21 +274,22 @@
             </div>
             <div id="location">
               <div class="location">
-                <h1>AKAD</h1>
+                <h1>AKAD &</h1>
+                <h1>OPEN HOUSE</h1>
                 <div class="line"></div>
                 <div class="time"><i class="fa-solid fa-clock"></i>09.00 - 10.00 WIB</div>
                 <div class="place"><i class="fa-solid fa-location-dot"></i>Koppi Warehouse</div>
                 <div class="address">Jl. Kapten A. Anwar Arsyad No.20, Siring Agung, Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30138</div>
-                <button>Open Maps</button>
+                <button><a href="https://maps.app.goo.gl/ZBQcKLzbuM5921zf8" target="_blank">Open Maps</a></button>
               </div>
-              <div class="location">
-                <h1>RESEPSI</h1>
-                <div class="line"></div>
-                <div class="time"><i class="fa-solid fa-clock"></i>10.30 - 12.00 WIB</div>
-                <div class="place"><i class="fa-solid fa-location-dot"></i>Koppi Warehouse</div>
-                <div class="address">Jl. Kapten A. Anwar Arsyad No.20, Siring Agung, Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30138</div>
-                <button>Open Maps</button>
-              </div>
+              <!-- <div class="location"> -->
+              <!--   <h1>RESEPSI</h1> -->
+              <!--   <div class="line"></div> -->
+              <!--   <div class="time"><i class="fa-solid fa-clock"></i>10.30 - 12.00 WIB</div> -->
+              <!--   <div class="place"><i class="fa-solid fa-location-dot"></i>Koppi Warehouse</div> -->
+              <!--   <div class="address">Jl. Kapten A. Anwar Arsyad No.20, Siring Agung, Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30138</div> -->
+              <!--   <button>Open Maps</button> -->
+              <!-- </div> -->
             </div>
           </div>
           <div class="footer">
@@ -313,48 +318,51 @@
           </div>
           <div id="gift-body">
             <div id="gift-container">
-              <!-- <canvas id="gift-image"></canvas> -->
+              <canvas id="gift-image" class="hide-image"></canvas>
               <h1>Wedding Gift</h1>
               <div class="lines">
                 <div class="line"></div>
                 <div class="line"></div>
               </div>
               <p>Bagi bapak/ibu/saudara/I yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini:</p>
-            </div>
-            <div id="open">
-              <div class="gift-card">
-                <img src="./assets/img/bsi.png" alt="">
-                <div class="gift-information">
-                  <p class="gift-number">1234 5678 90</p>
-                  <div class="gift-name">
-                    <p>Luthfiyah</p>
-                    <p>Afnan S</p>
+
+            <div id="gift-hider">
+              <div id="open">
+                <div class="gift-card">
+                  <img id="bsi" src="./assets/img/bsi.png" alt="">
+                  <div class="gift-information">
+                    <p id="bsi-number" class="gift-number">7108699617</p>
+                    <div class="gift-name">
+                      <p>Althaf T</p>
+                    </div>
                   </div>
+                  <button id="bsi-copy"><i class="fa-regular fa-copy"></i>Copy</button>
                 </div>
-                <button><i class="fa-regular fa-copy"></i>Copy</button>
-              </div>
-              <div class="gift-card">
-                <img src="./assets/img/bca.png" alt="">
-                <div class="gift-information">
-                  <p class="gift-number">1234 5678 90</p>
-                  <div class="gift-name">
-                    <p>Althaf T</p>
+                <div class="gift-card">
+                  <img src="./assets/img/bca.png" alt="">
+                  <div class="gift-information">
+                    <p id="bca-number" class="gift-number">8057000974</p>
+                    <div class="gift-name">
+                      <p>Luthfiyah</p>
+                      <p>Afnan S</p>
+                    </div>
                   </div>
+                  <button id="bca-copy"><i class="fa-regular fa-copy"></i>Copy</button>
                 </div>
-                <button><i class="fa-regular fa-copy"></i>Copy</button>
-              </div>
-              <div class="gift-present">
-                <i class="fa-duotone fa-solid fa-gift fa-xl"></i>
-                <p>Kirim Hadiah</p>
-                <div class="gift-information">
-                  <p>Nama Penerima: Althaf T</p>
-                  <p>No. HP: 08123456789</p>
-                  <p>Ds. XXX, Kec. XXX, Kab. XXX, Kota. XXX</p>
+                <div class="gift-present">
+                  <i class="fa-duotone fa-solid fa-gift fa-xl"></i>
+                  <p>Kirim Hadiah</p>
+                  <div class="gift-information">
+                    <p>Nama Penerima: Luthfiyah Adanan S</p>
+                    <p>No. HP: 0857-5865-4668</p>
+                    <p>Perumnas Bumi Telukjambe Blok QE 12 RT.05/RW.20, Jl. Cita Rasa 6, Sukaluyu, Telukjambe Timur, Karawang, Jawa Barat 41361</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <button id="toggle-gift">Open</button>
+            </div>
           </div>
 
           <div class="footer">
