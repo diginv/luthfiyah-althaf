@@ -1,6 +1,8 @@
 $(function() {
-  // const baseUrl = "http://109.106.255.62:8080";
-  const baseUrl = "http://localhost:8080";
+
+  // $("section").hide();
+  const baseUrl = "http://109.106.255.62:8080";
+  // const baseUrl = "http://localhost:8080";
   const song = document.getElementById("song")
   let isPlayed = false;
 
@@ -83,25 +85,34 @@ $(function() {
     song.play();
   })
 
+  const giftGap = $("#gift-container").css("gap").replace("px", "");
+  const giftHeight = $("#gift-image").height();
+  const giftCardHeight = $(".gift-card").height();
+
   $("#toggle-gift").click(() => {
-    console.log($("#gift-image").height());
-    if ($("#gift-image").height() === 150) {
+    if ($("#gift-image").height() === giftHeight) {
       $("#gift-image").height("0px");
-      $("#gift-hider").height("420px");
+      $("#gift-hider").height(giftCardHeight*3+(giftCardHeight/4));
       $("#toggle-gift").html("Close");
-      $("#gift-container").css("gap", "10px");
+      $("#gift-container").css("gap", `${giftGap/2}px`);
     } else {
-      $("#gift-image").height("150px");
+      $("#gift-image").height(giftHeight);
       $("#gift-hider").height("0px");
       $("#toggle-gift").html("Open");
-      $("#gift-container").css("gap", "20px");
+      $("#gift-container").css("gap", `${giftGap}px`);
     }
   })
 
   $("#wish-button").click(() => {
+    const name = $("#wish-nama").val()
+    const wish = $("#wish-ucapan").val()
+    if (name === "" || wish === "") {
+      alert("Nama atau ucapan masih kosong");
+      return;
+    }
     const data = {
-      name: $("#wish-nama").val(),
-      wish: $("#wish-ucapan").val(),
+      name: name,
+      wish: wish,
     };
     console.log(data);
     $.ajax(
