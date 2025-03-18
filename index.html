@@ -11,54 +11,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.3/purify.min.js" integrity="sha512-Ll+TuDvrWDNNRnFFIM8dOiw7Go7dsHyxRp4RutiIFW/wm3DgDmCnRZow6AqbXnCbpWu93yM1O34q+4ggzGeXVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./dust.js"></script>
-    <script src="https://livejs.com/live.js"></script>
+    <!-- <script src="https://livejs.com/live.js"></script> -->
   </head>
   <body>
 
-    <!-- <div id="playback"></div> -->
-    <audio id="song" loop>
-      <source src="./assets/audio/backsound.mp3" type="audio/mp3">
-    </audio>
-    <!-- <div class="desktop"></div> -->
+    <!-- <audio id="song" loop> -->
+    <!--   <source src="./assets/audio/backsound.mp3" type="audio/mp3"> -->
+    <!-- </audio> -->
+
     <!-- Cover Start -->
-    <div id="cover">
-      <div id="cover-container">
-        <div id="cover-header">
-          <img src="./assets/img/home/1.png" class="legend-corner left">
-          <img src="./assets/img/home/2.png" class="legend-side left">
-          <img src="./assets/img/home/3.png" class="legend-main">
-          <img src="./assets/img/home/4.png" class="legend-side right">
-          <img src="./assets/img/home/5.png" class="legend-corner right">
-        </div>
-        <div id="cover-line"></div>
+    <!-- <div id="cover"> -->
+    <!--   <div id="cover-container"> -->
+    <!--     <div id="cover-header"> -->
+    <!--       <img src="./assets/img/home/1.png" class="legend-corner left"> -->
+    <!--       <img src="./assets/img/home/2.png" class="legend-side left"> -->
+    <!--       <img src="./assets/img/home/3.png" class="legend-main"> -->
+    <!--       <img src="./assets/img/home/4.png" class="legend-side right"> -->
+    <!--       <img src="./assets/img/home/5.png" class="legend-corner right"> -->
+    <!--     </div> -->
+    <!--     <div id="cover-line"></div> -->
 
-        <div id="cover-content">
-          <div id="title-container">
-            <p id="title">- Wedding Invitation -</p>
-            <h1 id="title-name">Luthfiyah & Althaf</h1>
-          </div>
+    <!--     <div id="cover-content"> -->
+    <!--       <div id="title-container"> -->
+    <!--         <p id="title">- Wedding Invitation -</p> -->
+    <!--         <h1 id="title-name">Luthfiyah & Althaf</h1> -->
+    <!--       </div> -->
 
-          <div class="lines">
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <div class="image">
-            <canvas id="cover-image"></canvas>
-            <img id="cover-icon" src="./assets/img/cover-icon.png" alt="">
-            <div id="cover-date">05.04.2025</div>
-          </div>
-        </div>
+    <!--       <div class="lines"> -->
+    <!--         <div class="line"></div> -->
+    <!--         <div class="line"></div> -->
+    <!--       </div> -->
+    <!--       <div class="image"> -->
+    <!--         <canvas id="cover-image"></canvas> -->
+    <!--         <img id="cover-icon" src="./assets/img/cover-icon.png" alt=""> -->
+    <!--         <div id="cover-date">05.04.2025</div> -->
+    <!--       </div> -->
+    <!--     </div> -->
 
-        <div id="cover-footer">
-          <p class="strong">Dear</p>
-          <p>Tamu Undangan</p>
-          <div id="open-invitation">
-            <button id="invitation-button">Open Invitation</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--     <div id="cover-footer"> -->
+    <!--       <p class="strong">Dear</p> -->
+    <!--       <p>Tamu Undangan</p> -->
+    <!--       <div id="open-invitation"> -->
+    <!--         <button id="invitation-button">Open Invitation</button> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
     <!-- Cover END -->
 
     <div id="container">
@@ -278,7 +278,7 @@
                 <h1>AKAD &</h1>
                 <h1>OPEN HOUSE</h1>
                 <div class="line"></div>
-                <div class="time"><i class="fa-solid fa-clock"></i>09.00 - 10.00 WIB</div>
+                <div class="time"><i class="fa-solid fa-clock"></i>08.00 - 11.00 WIB</div>
                 <div class="place"><i class="fa-solid fa-location-dot"></i>Koppi Warehouse</div>
                 <div class="address">Jl. Kapten A. Anwar Arsyad No.20, Siring Agung, Kec. Ilir Bar. I, Kota Palembang, Sumatera Selatan 30138</div>
                 <button><a href="https://maps.app.goo.gl/ZBQcKLzbuM5921zf8" target="_blank">Open Maps</a></button>
@@ -376,6 +376,67 @@
         </div>
       </section>
       <!-- Fifth Section END -->
+
+      <!-- Sixth Section START -->
+      <section>
+        <div id="sixth-page">
+          <div class="header">
+            <div class="line"></div>
+            <div class="header-content">
+              <p class="header-left">2025</p>
+              <p class="header-middle">SABTU, 5 APRIL</p>
+              <p class="header-right">PALEMBANG</p>
+            </div>
+            <div class="line"></div>
+          </div>
+
+          <h1>Wedding Wish</h1>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+
+          <div id="wishes-container">
+
+            <div id="wishes-form">
+              <input id="wish-nama" type="text" placeholder="Nama" />
+              <textarea id="wish-ucapan" type="text" placeholder="Ucapan"></textarea>
+              <button id="wish-button">Kirim</button>
+            </div>
+
+            <div id="wishes">
+              <div class="wish">
+                <div class="nama">Orang A</div>
+                <div class="ucapan">Selamattttt</div>
+                <div class="waktu">1 hari lalu</div>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="line"></div>
+            <div class="footer-content">
+              <p class="footer-left">#ALifetimewithYA</p>
+              <img class="footer-right" src="./assets/img/footer-icon.png" alt="">
+            </div>
+          </div>
+          <img id="envelope" src="./assets/img/envelope.png" alt="HERE">
+        </div>
+      </section>
+      <!-- Sixth Section END -->
+
+      <!-- Seventh Section START -->
+      <section>
+        <div id="seventh-page">
+          <img src="./assets/img/footer-icon.png" alt="">
+          <h1>Terima Kasih</h1>
+          <p>Merupakan suatu kebahagiaan dan kehormatanbagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami. </p>
+          <p><strong>KAMI YANG BERBAHAGIA</strong></p>
+          <h1><i>Luthfiyah & Althaf</i></h1>
+        </div>
+      </section>
+      <!-- Seventh Section END -->
 
     </div>
     <script src="./script.js"></script>
