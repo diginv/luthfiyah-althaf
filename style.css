@@ -57,7 +57,7 @@ section {
   transition: 1.5s;
   top: 0px;
   right: 0px;
-  /* width: 100%; */
+  /* width: 600px; */
   /* height: 95vh; */
   position: absolute;
   background-image: url("./assets/img/bg.png");
@@ -1243,7 +1243,7 @@ p {
   }
 }
 
-@media screen and (max-height: 750px),
+@media screen and (max-height: 720px),
        screen and (max-width: 360px) {
   #ayat > p {
     font-size: 0.55rem;

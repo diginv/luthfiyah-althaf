@@ -87,12 +87,12 @@ $(function() {
 
   const giftGap = $("#gift-container").css("gap").replace("px", "");
   const giftHeight = $("#gift-image").height();
-  const giftCardHeight = $(".gift-card").height();
+  const openHeight = $("#open").height();
 
   $("#toggle-gift").click(() => {
     if ($("#gift-image").height() === giftHeight) {
       $("#gift-image").height("0px");
-      $("#gift-hider").height(giftCardHeight*3+(giftCardHeight/4));
+      $("#gift-hider").height(openHeight);
       $("#toggle-gift").html("Close");
       $("#gift-container").css("gap", `${giftGap/2}px`);
     } else {
