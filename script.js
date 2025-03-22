@@ -43,33 +43,80 @@ $(function() {
 
   const wishes = document.getElementById("wishes");
 
-  const refresh = () => {
+  const refresh = async () => {
     wishes.innerHTML = "";
-    $.ajax(
-      {
-        url: `${baseUrl}/wishes`,
-        success: (result) => {
-          result.forEach((el) => {
-            const createdDate = new Date(el.createdAt)
-            const currentDate = new Date();
-            const diffTime = currentDate - createdDate;
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-            console
-            if (diffDays > 0) {
-              time = `${diffDays} hari yang lalu`
-            } else if (currentDate.getHours() - createdDate.getHours() > 0) {
-              time = `${currentDate.getHours() - createdDate.getHours()} jam lalu`
-            } else if (currentDate.getMinutes() - createdDate.getMinutes() > 0) {
-              time = `${currentDate.getMinutes() - createdDate.getMinutes()} menit lalu`
-            } else {
-              time = `${currentDate.getSeconds() - createdDate.getSeconds()} detik lalu`
-            }
-            wishes.appendChild(createWish(el.name, el.wish, time));
-          });
-        }
+    const response = await fetch(`${baseUrl}/wishes`);
+    const data = await response.json();
+    data.forEach((el) => {
+      const createdDate = new Date(el.createdAt)
+      const currentDate = new Date();
+      const diffTime = currentDate - createdDate;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      console
+      if (diffDays > 0) {
+        time = `${diffDays} hari yang lalu`
+      } else if (currentDate.getHours() - createdDate.getHours() > 0) {
+        time = `${currentDate.getHours() - createdDate.getHours()} jam lalu`
+      } else if (currentDate.getMinutes() - createdDate.getMinutes() > 0) {
+        time = `${currentDate.getMinutes() - createdDate.getMinutes()} menit lalu`
+      } else {
+        time = `${currentDate.getSeconds() - createdDate.getSeconds()} detik lalu`
       }
-    );
+      wishes.appendChild(createWish(el.name, el.wish, time));
+    });
+    // $.ajax(
+    //   {
+    //     url: `${baseUrl}/wishes`,
+    //     success: (result) => {
+    //       result.forEach((el) => {
+    //         const createdDate = new Date(el.createdAt)
+    //         const currentDate = new Date();
+    //         const diffTime = currentDate - createdDate;
+    //         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    //         console
+    //         if (diffDays > 0) {
+    //           time = `${diffDays} hari yang lalu`
+    //         } else if (currentDate.getHours() - createdDate.getHours() > 0) {
+    //           time = `${currentDate.getHours() - createdDate.getHours()} jam lalu`
+    //         } else if (currentDate.getMinutes() - createdDate.getMinutes() > 0) {
+    //           time = `${currentDate.getMinutes() - createdDate.getMinutes()} menit lalu`
+    //         } else {
+    //           time = `${currentDate.getSeconds() - createdDate.getSeconds()} detik lalu`
+    //         }
+    //         wishes.appendChild(createWish(el.name, el.wish, time));
+    //       });
+    //     }
+    //   }
+    // );
   }
+
+  // const refresh = () => {
+  //   wishes.innerHTML = "";
+  //   $.ajax(
+  //     {
+  //       url: `${baseUrl}/wishes`,
+  //       success: (result) => {
+  //         result.forEach((el) => {
+  //           const createdDate = new Date(el.createdAt)
+  //           const currentDate = new Date();
+  //           const diffTime = currentDate - createdDate;
+  //           const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  //           console
+  //           if (diffDays > 0) {
+  //             time = `${diffDays} hari yang lalu`
+  //           } else if (currentDate.getHours() - createdDate.getHours() > 0) {
+  //             time = `${currentDate.getHours() - createdDate.getHours()} jam lalu`
+  //           } else if (currentDate.getMinutes() - createdDate.getMinutes() > 0) {
+  //             time = `${currentDate.getMinutes() - createdDate.getMinutes()} menit lalu`
+  //           } else {
+  //             time = `${currentDate.getSeconds() - createdDate.getSeconds()} detik lalu`
+  //           }
+  //           wishes.appendChild(createWish(el.name, el.wish, time));
+  //         });
+  //       }
+  //     }
+  //   );
+  // }
 
   refresh();
 
