@@ -1,7 +1,8 @@
 $(function() {
 
   // $("section").hide();
-  const baseUrl = "http://109.106.255.62:8080";
+  // const baseUrl = "https://109.106.255.62:8443";
+  const baseUrl = "http://diginv.duckdns.org:8080";
   // const baseUrl = "http://localhost:8080";
   const song = document.getElementById("song")
   let isPlayed = false;
