@@ -1,8 +1,13 @@
 $(function() {
 
+  const params = new URLSearchParams(window.location.search);
+  const to = params.get("to") || "Tamu Undangan";
+  $("#to").text(to);
+  // $("#wish-nama").val(to);
+
   // $("section").hide();
-  // const baseUrl = "https://109.106.255.62:8443";
-  const baseUrl = "http://diginv.duckdns.org:8080";
+  // const baseUrl = "http://109.106.255.62:8080";
+  const baseUrl = "https://diginv.site/api";
   // const baseUrl = "http://localhost:8080";
   const song = document.getElementById("song")
   let isPlayed = false;
@@ -17,10 +22,39 @@ $(function() {
     }
   });
 
-  const createWish = (nama, ucapan, waktu) => {
+  const isFormCompleted = () => {
+    console.log(  $("#wish-nama").val());
+    console.log($("#wish-ucapan").val())
+    console.log($("#attendance").val())
+
+    const name = $("#wish-nama").val()
+    const wish = $("#wish-ucapan").val()
+    const attendance = $("#attendance").val()
+    if (name === "" || wish === "" || attendance === "") {
+      $("#wish-button").prop('disabled', true);
+      return;
+    }
+    $("#wish-button").prop('disabled', false);
+  }
+
+  $("#wish-nama").keyup(isFormCompleted);
+  $("#wish-ucapan").keyup(isFormCompleted);
+  $("#attendance").change(isFormCompleted);
+
+  const createWish = (nama, attendance, ucapan, waktu) => {
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid");
+    if (attendance) {
+      icon.classList.add("fa-circle-check");
+    } else {
+      icon.classList.add("fa-circle-xmark");
+    }
+
     const namaEl = document.createElement("div");
     namaEl.classList.add("nama");
-    namaEl.textContent = nama;
+    namaEl.appendChild(icon);
+    namaEl.appendChild(icon);
+    namaEl.appendChild(document.createTextNode(` ${nama}`));
 
     const ucapanEl = document.createElement("div");
     ucapanEl.classList.add("ucapan");
@@ -52,7 +86,6 @@ $(function() {
       const currentDate = new Date();
       const diffTime = currentDate - createdDate;
       const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-      console
       if (diffDays > 0) {
         time = `${diffDays} hari yang lalu`
       } else if (currentDate.getHours() - createdDate.getHours() > 0) {
@@ -62,7 +95,7 @@ $(function() {
       } else {
         time = `${currentDate.getSeconds() - createdDate.getSeconds()} detik lalu`
       }
-      wishes.appendChild(createWish(el.name, el.wish, time));
+      wishes.appendChild(createWish(el.name, el.attendance, el.wish, time));
     });
     // $.ajax(
     //   {
@@ -154,6 +187,7 @@ $(function() {
   $("#wish-button").click(() => {
     const name = $("#wish-nama").val()
     const wish = $("#wish-ucapan").val()
+    const attendance = $("#attendance").val()
     if (name === "" || wish === "") {
       alert("Nama atau ucapan masih kosong");
       return;
@@ -161,6 +195,7 @@ $(function() {
     const data = {
       name: name,
       wish: wish,
+      attendance: attendance,
     };
     console.log(data);
     $.ajax(
@@ -171,8 +206,10 @@ $(function() {
         dataType: "json",
         data: JSON.stringify(data),
         success: (result) => {
+          $("#wish-button").prop('disabled', true);
           $("#wish-nama").val("");
           $("#wish-ucapan").val("");
+          $("#attendance").val("");
           refresh();
         }
       }

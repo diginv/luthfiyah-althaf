@@ -57,7 +57,7 @@ section {
   transition: 1.5s;
   top: 0px;
   right: 0px;
-  /* width: 600px; */
+  width: 100%;
   /* height: 95vh; */
   position: absolute;
   background-image: url("./assets/img/bg.png");
@@ -1121,7 +1121,17 @@ p {
   gap: 10px;
 }
 
+#wishes-form > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  /* width: 100%; */
+  /* border: 1px solid red; */
+}
+
 #wishes-form > input,
+#wishes-form > div > select,
 #wishes-form > textarea {
   font-family: "Poppins";
   outline: none;
@@ -1146,7 +1156,28 @@ p {
   border-radius: 20px;
 }
 
-#wishes-form > button {
+#wishes-form > div > select {
+  width: 100%;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+
+#wishes-form > div > select::after {
+  z-index: 100;
+  width: 500px;
+  height: 500px;
+  content: "helllo";
+  /* position: absolute; */
+  /* right: 10px; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* border: 5px solid transparent; */
+  /* border-top: 5px solid #333; */
+  background-color: red;
+}
+
+#wishes-form > div > button {
   margin-top: 5px;
   font-family: "Poppins";
   /* font-size: 1rem; */
@@ -1157,6 +1188,11 @@ p {
   padding: 5px 25px;
   outline: none;
   border: none;
+}
+
+#wishes-form > div > button:disabled {
+  background-color: gray;
+  cursor: default;
 }
 
 #wishes {
