@@ -23,10 +23,27 @@ body {
   justify-content: flex-end;
 }
 
-.desktop {
-  background-color: red;
-  border:1px solid red;
-  width: 500px;
+.desktop-wrapper {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.desktop-wrapper > p,
+.desktop-wrapper > h1 {
+  color: white;
+}
+
+.desktop-wrapper > h1 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-size: 150px;
+}
+
+.desktop-wrapper > p {
+  color: white;
+  font-size: 50px;
 }
 
 #playback {
@@ -1270,6 +1287,36 @@ p {
   text-align: center;
   width: 60%;
   padding-top: 30px;
+}
+
+@media screen and (max-width: 1440px) {
+  .desktop-wrapper {
+    top: 75px;
+    left: 75px;
+  }
+
+  .desktop-wrapper > h1 {
+    font-size: 100px;
+  }
+
+  .desktop-wrapper > p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-wrapper {
+    top: 40px;
+    left: 40px;
+  }
+
+  .desktop-wrapper > h1 {
+    font-size: 60px;
+  }
+
+  .desktop-wrapper > p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (orientation:portrait) {

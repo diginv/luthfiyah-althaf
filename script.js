@@ -3,6 +3,7 @@ $(function() {
   const params = new URLSearchParams(window.location.search);
   const to = params.get("to") || "Tamu Undangan";
   $("#to").text(to);
+  $("#desktop-to").text(`Dear ${to}`);
   // $("#wish-nama").val(to);
 
   // $("section").hide();
